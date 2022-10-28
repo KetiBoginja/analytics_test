@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script type='text/javascript'>
+
+    function trackSubmit() { 
+        // ga('send', 'event', 'button', 'click', 'searchsubmit', 4);
+        alert('testing send event')
+    }
+
+    function trackClick() { 
+        ga('send', 'event', 'button', 'click', 'This is coool');
+    }
+
+
+</script>
+
+<body>
+Pushing data.......
+
+    <form onsubmit='trackSubmit()' id='searchsubmit'>
+        <button type='submit' id= 'searchsubmit'>Search</button>
+
+        </br>
+        <a href='http://cool.com' onclick="trackClick(); return false;">cool</a>
+    </form>
+
+</body>
+</html>
